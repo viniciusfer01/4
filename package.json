@@ -1,0 +1,25 @@
+{
+  "name": "list_of_users",
+  "version": "1.0.0",
+  "description": "Creates new users and lists them with templating engines",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "ejs"
+  ],
+  "author": "Vinícius Soares Fernandes",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
