@@ -2,4 +2,9 @@
 
 <h1>User List:</h1>
 
-<%- include('./layouts/footer.ejs') %>
+<% if(users.length == 0) { %>
+<p>No users yet...</p>
+<a href="/userForm">Add user</a>
+<% } else { %>
+<p>There are <%= users.length%> Users... YAY!</p>
+<% } %> <%- include('./layouts/footer.ejs') %>

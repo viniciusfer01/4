@@ -5,11 +5,15 @@ const path = require("path");
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("userList.ejs", { title: "User List" });
+  res.render("userList", { title: "User List", users: [] });
 });
 
 app.get("/userForm", (req, res) => {
-  res.render("userForm.ejs");
+  res.render("userForm", { title: "Create User" });
+});
+
+app.post("/userForm", (req, res) => {
+  res.redirect("/");
 });
 
 app.listen(8080, () => {
