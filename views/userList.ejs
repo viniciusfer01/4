@@ -7,4 +7,11 @@
 <a href="/userForm">Add user</a>
 <% } else { %>
 <p>There are <%= users.length%> Users... YAY!</p>
+
+<ul>
+  <% users.forEach((user) => { %>
+  <li><%= user.email %></li>
+  <% }) %>
+</ul>
+
 <% } %> <%- include('./layouts/footer.ejs') %>

@@ -1,11 +1,16 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
 
+const users = [];
+
 app.set("view engine", "ejs");
 
+app.use(bodyParser.urlencoded());
+
 app.get("/", (req, res) => {
-  res.render("userList", { title: "User List", users: [] });
+  res.render("userList", { title: "User List", users: users });
 });
 
 app.get("/userForm", (req, res) => {
@@ -13,6 +18,7 @@ app.get("/userForm", (req, res) => {
 });
 
 app.post("/userForm", (req, res) => {
+  users.push({ email: req.body.userEmail });
   res.redirect("/");
 });
 
